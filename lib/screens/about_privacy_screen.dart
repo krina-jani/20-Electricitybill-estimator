@@ -223,19 +223,6 @@ class AboutPrivacyScreen extends StatelessWidget {
                       child: Divider(height: 1, color: AppTheme.borderColor),
                     ),
 
-                    // Facebook Tile
-                    _buildLinkTile(
-                      iconWidget: AppIcons.facebook(size: 22, color: const Color(0xFF1877F2)),
-                      iconBg: const Color(0xFFEEF2FF),
-                      title: 'Facebook',
-                      subtitle: 'Follow us on Facebook',
-                      onTap: () => _launchURL(context, facebookUrl),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 6),
-                      child: Divider(height: 1, color: AppTheme.borderColor),
-                    ),
-
                     // Contact Us Phone Tile
                     _buildLinkTile(
                       iconWidget: AppIcons.phone(size: 22, color: AppTheme.accentGreen),
