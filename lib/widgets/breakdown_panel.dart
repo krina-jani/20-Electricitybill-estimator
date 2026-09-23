@@ -42,17 +42,19 @@ class BreakdownPanel extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Flexible(
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  alignment: Alignment.centerLeft,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
+              Expanded(
+                child: Text.rich(
+                  TextSpan(
                     children: [
-                      AppIcons.pieChart(size: 16, color: AppTheme.primaryAccent),
-                      const SizedBox(width: 6),
-                      const Text(
-                        'COST BREAKDOWN',
+                      WidgetSpan(
+                        alignment: PlaceholderAlignment.middle,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 6),
+                          child: AppIcons.pieChart(size: 16, color: AppTheme.primaryAccent),
+                        ),
+                      ),
+                      const TextSpan(
+                        text: 'COST BREAKDOWN',
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
@@ -62,33 +64,32 @@ class BreakdownPanel extends StatelessWidget {
                       ),
                     ],
                   ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
               const SizedBox(width: 6),
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [AppTheme.primaryAccent, AppTheme.primaryGradientEnd],
-                    ),
-                    borderRadius: BorderRadius.circular(6),
-                    boxShadow: [
-                      BoxShadow(
-                        color: AppTheme.primaryAccent.withValues(alpha: 0.25),
-                        blurRadius: 6,
-                        offset: const Offset(0, 2),
-                      ),
-                    ],
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [AppTheme.primaryAccent, AppTheme.primaryGradientEnd],
                   ),
-                  child: Text(
-                    input.billingPeriod.label,
-                    style: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
+                  borderRadius: BorderRadius.circular(6),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppTheme.primaryAccent.withValues(alpha: 0.25),
+                      blurRadius: 6,
+                      offset: const Offset(0, 2),
                     ),
+                  ],
+                ),
+                child: Text(
+                  input.billingPeriod.label,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -160,20 +161,29 @@ class BreakdownPanel extends StatelessWidget {
           const SizedBox(height: 24),
 
           // RESULTS section
-          Row(
-            children: [
-              AppIcons.chart(size: 16, color: AppTheme.primaryAccent),
-              const SizedBox(width: 6),
-              const Text(
-                'RESULTS',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                  color: AppTheme.textSecondary,
-                  letterSpacing: 1.0,
+          Text.rich(
+            TextSpan(
+              children: [
+                WidgetSpan(
+                  alignment: PlaceholderAlignment.middle,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 6),
+                    child: AppIcons.chart(size: 16, color: AppTheme.primaryAccent),
+                  ),
                 ),
-              ),
-            ],
+                const TextSpan(
+                  text: 'RESULTS',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w700,
+                    color: AppTheme.textSecondary,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+              ],
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: 10),
 

@@ -113,7 +113,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
                         'We may update this Privacy Policy periodically. Changes will be reflected with an updated "Last Updated" date.'),
 
                     _buildPolicySection('12. Contact Us',
-                        'If you have questions regarding this Privacy Policy:\n\nEmperor Smart Solutions\nPhone: +91 63543 51080\nInstagram: https://www.instagram.com/emperorsmartsolutions\nLinkedIn: https://www.linkedin.com/company/emperor-smart-solutions/'),
+                        'If you have questions regarding this Privacy Policy, please contact:\n\nEmperor Smart Solutions\nPhone: +91 63543 51080'),
 
                     const SizedBox(height: 16),
                     const Divider(height: 1, color: AppTheme.borderColor),

@@ -10,8 +10,6 @@ class AboutPrivacyScreen extends StatelessWidget {
 
   static const String instagramUrl = 'https://www.instagram.com/emperorsmartsolutions?stkn=eng4aTNpcWZqbWE=';
   static const String linkedInUrl = 'https://www.linkedin.com/company/emperor-smart-solutions/';
-  static const String facebookUrl = 'https://www.facebook.com/emperorsmartsolutions';
-  static const String gitHubUrl = 'https://github.com/emperorsmartsolutions';
   static const String phoneNumber = '+916354351080';
   static const String formattedPhone = '+91 63543 51080';
 

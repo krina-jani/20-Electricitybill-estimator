@@ -8,6 +8,6 @@ void main() {
     // Verify app title and calculator elements exist
     expect(find.text('Electricity Cost Calculator'), findsOneWidget);
     expect(find.text('Electricity Usage (kWh) *'), findsOneWidget);
-    expect(find.text('COST BREAKDOWN'), findsOneWidget);
+    expect(find.textContaining('COST BREAKDOWN'), findsOneWidget);
   });
 }
